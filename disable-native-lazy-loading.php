@@ -1,7 +1,7 @@
 <?php
 
 /*
-    DISABLE LAZY LOADING FOR WORDPRESS
+    DISABLE NATIVE LAZY LOADING FOR WORDPRESS
 
     Plugin Name:            Disable Native Lazy Loading
     Plugin URI:             https://github.com/demetris/disable-native-lazy-loading
