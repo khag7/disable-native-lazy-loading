@@ -3,9 +3,9 @@
 /*
     DISABLE NATIVE LAZY LOADING FOR WORDPRESS
 
-    Plugin Name:            Disable Native Lazy Loading
+    Plugin Name:            Disable Native Lazy Loading for Custom Logo
     Plugin URI:             https://github.com/demetris/disable-native-lazy-loading
-    Description:            Disables native lazy loading of images in WordPress 5.5
+    Description:            Disables native lazy loading of custom logos in WordPress 5.5
     Version:                0.1.0
     Author:                 Demetris Kikizas
     Author URI:             https://kikizas.com/
@@ -14,4 +14,7 @@
     GitHub Plugin URI:      https://github.com/demetris/disable-native-lazy-loading
 */
 
-add_filter('wp_lazy_loading_enabled', '__return_false');
+add_filter( 'get_custom_logo_image_attributes', function( $attributes ){
+	$attributes['loading'] = 'eager';
+	return $attributes;
+});
